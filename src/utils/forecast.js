@@ -17,7 +17,11 @@ const forecast = (longitude, latitude, callback) => {
       callback(
         undefined,
         body.daily.data[0].summary +
-          " It is currently " +
+          " The highest temperature is " +
+          body.daily.data[0].temperatureHigh +
+          ", and the lowest temperature is " +
+          body.daily.data[0].temperatureLow +
+          ". It is currently " +
           body.currently.temperature +
           " degrees out. There is a " +
           body.currently.precipProbability +
